@@ -30,8 +30,8 @@ export { DEFAULT_USER } from './constants';
 
 export { UserComponent } from './UserComponent';
 export type { UserComponentProps } from "./UserComponent";
-export { DEFAULT_USER } from './constants';
 export type { UserType } from "./types";
+export { DEFAULT_USER } from './constants';
 ```
 
 ## Changelog
