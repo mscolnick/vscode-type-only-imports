@@ -1,0 +1,10 @@
+node_modules
+.github
+.vscode
+test/**
+src/**
+**/*.map
+.*
+tsconfig.json
+vsc-extension-quickstart.md
+rollup.config.js

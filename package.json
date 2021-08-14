@@ -1,0 +1,88 @@
+{
+  "name": "vscode-type-only-imports",
+  "displayName": "Type-only imports and exports",
+  "description": "Convert imports and exports to type-only declarations",
+  "version": "0.1.0",
+  "files": [
+    "out",
+    "images"
+  ],
+  "publisher": "mscolnick",
+  "engines": {
+    "vscode": "^1.59.0"
+  },
+  "icon": "images/icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mscolnick/vscode-type-only-imports.git"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "convert",
+    "imports",
+    "exports",
+    "code-mod",
+    "typescript"
+  ],
+  "activationEvents": [
+    "onCommand:vscode-type-only-imports.convert-imports-exports",
+    "onCommand:vscode-type-only-imports.convert-imports",
+    "onCommand:vscode-type-only-imports.convert-exports"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "vscode-type-only-imports.convert-imports-exports",
+        "title": "Type-only: Convert Imports and Exports"
+      },
+      {
+        "command": "vscode-type-only-imports.convert-imports",
+        "title": "Type-only: Convert Imports"
+      },
+      {
+        "command": "vscode-type-only-imports.convert-exports",
+        "title": "Type-only: Convert Exports"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "Type-only imports and exports",
+      "properties": {
+        "vscode-type-only-imports.tsconfig": {
+          "type": "string",
+          "default": "./tsconfig.json",
+          "description": "Path to tsconfig.json"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run build",
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "lint": "eslint . --ext .ts",
+    "lint-fix": "eslint . --ext .ts --fix"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^20.0.0",
+    "@rollup/plugin-node-resolve": "^13.0.4",
+    "@rollup/plugin-typescript": "^8.2.5",
+    "@types/node": "^16.6.1",
+    "@typescript-eslint/eslint-plugin": "^4.29.1",
+    "@typescript-eslint/parser": "^4.29.1",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "prettier": "^2.3.2",
+    "rollup": "^2.56.2",
+    "typescript": "^4.3.5"
+  },
+  "dependencies": {
+    "@types/vscode": "^1.59.0",
+    "source-map-support": "^0.5.19",
+    "ts-morph": "^11.0.3"
+  }
+}

@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+      "target": "ES6",
+      "module": "ESNext",
+      "moduleResolution": "node",
+      "lib": ["ES6"],
+      "noUnusedLocals": true,
+      "noUnusedParameters": true,
+      "strict": true,
+      "baseUrl": "."
+    },
+    "include": ["src", "test"],
+    "exclude": ["node_modules"]
+}
